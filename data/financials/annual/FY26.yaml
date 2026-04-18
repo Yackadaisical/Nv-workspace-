@@ -1,0 +1,52 @@
+period: FY26
+period_end: 2026-01-25
+filed_on: 2026-02-25
+source_urls:
+  ten_k: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-K
+  press_release: https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026
+
+# All $ in millions unless noted
+income_statement:
+  revenue_total:
+    value: 215900
+    source: ten_k_income_statement
+  revenue_by_segment:
+    data_center: { value: 197300, source: ten_k_segment_note }
+    gaming:      { value: null,   source: "" }
+    pro_viz:     { value: null,   source: "" }
+    auto:        { value: null,   source: "" }
+    oem:         { value: null,   source: "" }
+  gross_profit_gaap:        { value: null, source: "" }
+  gross_margin_gaap_pct:    { value: 71.1, source: press_release_fy_summary }
+  gross_margin_nongaap_pct: { value: 71.3, source: press_release_fy_summary }
+  opex_rd:                  { value: null, source: "" }
+  opex_sga:                 { value: null, source: "" }
+  operating_income_gaap:    { value: 130400, source: press_release_fy_summary }
+  net_income_gaap:          { value: 120100, source: press_release_fy_summary }
+  eps_diluted_gaap:         { value: null, source: "pending_10k" }
+  eps_diluted_nongaap:      { value: null, source: "pending_10k" }
+
+balance_sheet:
+  cash_and_marketable_securities: { value: null, source: "" }
+  total_debt:                     { value: null, source: "" }
+  inventory:                      { value: null, source: "" }
+  purchase_commitments:           { value: null, source: "" }
+
+cash_flow:
+  operating_cash_flow: { value: null, source: "" }
+  capex:               { value: null, source: "" }
+  buybacks:            { value: null, source: "" }
+  dividends:           { value: null, source: "" }
+
+cross_check:
+  sum_of_quarters_matches: null     # fill when line-item detail is ingested
+  reclassifications: []
+
+long_term_framing:
+  tam_statement: ""
+  capital_return_policy: ""
+  segment_changes: ""
+
+notes:
+  opex_fy_gaap: 23100              # $m, +41% YoY per press release commentary
+  source_opex: press_release_commentary

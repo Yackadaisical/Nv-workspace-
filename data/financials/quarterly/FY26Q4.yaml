@@ -1,0 +1,50 @@
+period: FY26Q4
+period_end: 2026-01-25
+reported_on: 2026-02-25
+source_urls:
+  press_release: https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026
+  cfo_commentary: https://investor.nvidia.com/financial-info/financial-reports/default.aspx
+  # No Q4 standalone 10-Q; Q4 is covered by the FY26 10-K.
+
+# All $ in millions unless noted
+income_statement:
+  revenue_total:
+    value: 68100
+    source: press_release_income_statement
+  revenue_by_segment:
+    data_center: { value: 62300, source: press_release_segments }
+    gaming:      { value: null,  source: "" }
+    pro_viz:     { value: 1300,  source: press_release_segments }
+    auto:        { value: 604,   source: press_release_segments }
+    oem:         { value: null,  source: "" }
+  gross_profit_gaap:        { value: null, source: "" }
+  gross_margin_gaap_pct:    { value: 75.0, source: press_release_results_summary }
+  gross_margin_nongaap_pct: { value: 75.2, source: press_release_results_summary }
+  opex_rd:                  { value: null, source: "" }
+  opex_sga:                 { value: null, source: "" }
+  operating_income_gaap:    { value: null, source: "" }
+  net_income_gaap:          { value: null, source: "" }
+  # NOTE: public summaries cite EPS figures ambiguously; fill from filed 10-K
+  # to get GAAP vs non-GAAP the right way round.
+  eps_diluted_gaap:         { value: null, source: "pending_10k" }
+  eps_diluted_nongaap:      { value: null, source: "pending_10k" }
+
+balance_sheet:
+  cash_and_marketable_securities: { value: null, source: "" }
+  total_debt:                     { value: null, source: "" }
+  inventory:                      { value: null, source: "" }
+  purchase_commitments:           { value: null, source: "" }
+
+cash_flow:
+  operating_cash_flow: { value: null, source: "" }
+  capex:               { value: null, source: "" }
+  buybacks:            { value: null, source: "" }
+  dividends:           { value: null, source: "" }
+
+notes:
+  significant_customers: ""
+  subsequent_events: ""
+  mgmt_color: |
+    Record Data Center at $62.3B, +22% QoQ / +75% YoY. Pro Viz broke out
+    on Blackwell-driven workstation demand (+159% YoY). Q1 FY27 guide of
+    $78.0B ±2% implies continued Blackwell ramp.

@@ -1,0 +1,113 @@
+# Base scenario projection drivers for NVDA.
+#
+# Keys here map 1:1 to named ranges in workbooks/NVDA_Projections.xlsx under
+# the prefix `nv.` — e.g. the YAML key `supply.cowos_wafers.fy27` maps to the
+# named range `nv.supply.cowos_wafers.fy27`.
+#
+# Only scalar leaves are written to the workbook; container dicts are just
+# organizational. Any value set to null is left alone in the workbook (prior
+# value retained). Adding new keys is fine — they just have to have a
+# matching named range defined in the projection workbook to take effect.
+#
+# All $ in millions unless noted. Units in actual device counts.
+#
+# This file is the single lever for Base-scenario model assumptions.
+# Every change here should produce a views/changelog.md entry in the same turn.
+
+# ============================================================
+# Bottom-up demand (customer × chip SKU × quarter)
+# ============================================================
+bu:
+  # Hyperscalers — units by SKU by quarter
+  msft:
+    gb200:
+      units: { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+      asp:   { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+  meta:
+    gb200:
+      units: { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+      asp:   { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+  goog:
+    gb200:
+      units: { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+      asp:   { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+  amzn:
+    gb200:
+      units: { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+      asp:   { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+  orcl:
+    gb200:
+      units: { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+      asp:   { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+  # Tier-2: ByteDance, xAI, Tesla, CoreWeave aggregated
+  tier2:
+    gb200:
+      units: { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+      asp:   { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+  sovereign:
+    gb200:
+      units: { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+      asp:   { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+  enterprise:
+    gb200:
+      units: { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+      asp:   { fy27q1: null, fy27q2: null, fy27q3: null, fy27q4: null }
+
+# ============================================================
+# Top-down: accelerator TAM × NVDA share
+# ============================================================
+td:
+  accelerator_tam:
+    fy27: null        # $m — total AI accelerator market
+    fy28: null
+    fy29: null
+  nvda_share:
+    fy27: null        # 0..1
+    fy28: null
+    fy29: null
+
+# ============================================================
+# Supply (annual)
+# ============================================================
+supply:
+  cowos_wafers:
+    fy27: 520000      # smoke-test: was 600000 (hypothetical prior view); set to 520000 per 2026-04-18 TSMC note
+    fy28: null
+    fy29: null
+  hbm_allocation_gb:
+    fy27: null        # GB of HBM allocated to NVDA
+    fy28: null
+    fy29: null
+  packaging_yield_pct:
+    fy27: null
+    fy28: null
+    fy29: null
+
+# ============================================================
+# Margins (quarterly)
+# ============================================================
+margin:
+  hbm_cost_per_gb:
+    fy27q1: null
+    fy27q2: null
+    fy27q3: null
+    fy27q4: null
+  yield_uplift_pct:
+    fy27q1: null
+
+# ============================================================
+# Opex & below-the-line (annual)
+# ============================================================
+opex:
+  rd_growth_yoy_pct:
+    fy27: null        # fraction, e.g. 0.25 = +25% YoY
+    fy28: null
+  sga_growth_yoy_pct:
+    fy27: null
+    fy28: null
+  tax_rate_pct:
+    fy27: null        # fraction
+    fy28: null
+  buyback_usd:
+    fy27: null        # $m deployed
+    fy28: null

@@ -1,0 +1,37 @@
+period: FY26Q3
+issued_on: 2025-11-19
+guides_for: FY26Q4
+
+quantitative:
+  revenue:
+    midpoint: 65000
+    range_pct: 2.0
+    actual: 68100
+    variance_pct: 4.77
+  gm_gaap_pct:
+    midpoint: 74.8
+    range_bps: 50
+    actual: 75.0
+    variance_bps: 20
+  gm_nongaap_pct:
+    midpoint: 75.0
+    range_bps: 50
+    actual: 75.2
+    variance_bps: 20
+  opex_gaap:
+    midpoint: null
+    actual: null
+  opex_nongaap:
+    midpoint: null
+    actual: null
+  tax_rate_pct:
+    midpoint: null
+    actual: null
+
+management_promises:
+  - id: FY26Q3-p1
+    quote: "Record Data Center quarter driven by Blackwell platform shift."
+    speaker: Colette
+    timeframe: FY26Q4
+    status: Delivered
+    evidence: data/financials/quarterly/FY26Q4.yaml

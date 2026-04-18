@@ -1,0 +1,43 @@
+period: FY26Q4
+issued_on: 2026-02-25
+guides_for: FY27Q1
+
+quantitative:
+  revenue:
+    midpoint: 78000
+    range_pct: 2.0
+    actual: null
+    variance_pct: null
+  gm_gaap_pct:
+    midpoint: null
+    range_bps: null
+    actual: null
+    variance_bps: null
+  gm_nongaap_pct:
+    midpoint: null
+    range_bps: null
+    actual: null
+    variance_bps: null
+  opex_gaap:
+    midpoint: null
+    actual: null
+  opex_nongaap:
+    midpoint: null
+    actual: null
+  tax_rate_pct:
+    midpoint: null
+    actual: null
+
+management_promises:
+  - id: FY26Q4-p1
+    quote: "Q1 FY27 revenue outlook of $78.0B ±2%."
+    speaker: Colette
+    timeframe: FY27Q1
+    status: Pending
+    evidence: ""
+  - id: FY26Q4-p2
+    quote: "Data center revenue up 75% YoY in Q4; accelerated computing and AI platform shift continuing."
+    speaker: Jensen
+    timeframe: FY27
+    status: Pending
+    evidence: ""

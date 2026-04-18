@@ -1,0 +1,37 @@
+period: FY26Q2
+issued_on: 2025-08-27
+guides_for: FY26Q3
+
+quantitative:
+  revenue:
+    midpoint: 54000
+    range_pct: 2.0
+    actual: 57006
+    variance_pct: 5.57
+  gm_gaap_pct:
+    midpoint: 73.3
+    range_bps: 50
+    actual: 73.4
+    variance_bps: 10
+  gm_nongaap_pct:
+    midpoint: 73.5
+    range_bps: 50
+    actual: 73.6
+    variance_bps: 10
+  opex_gaap:
+    midpoint: null
+    actual: null
+  opex_nongaap:
+    midpoint: null
+    actual: null
+  tax_rate_pct:
+    midpoint: null
+    actual: null
+
+management_promises:
+  - id: FY26Q2-p1
+    quote: "Blackwell Data Center revenue grew 17% sequentially; ramp continues into 2H."
+    speaker: Colette
+    timeframe: FY26Q3-Q4
+    status: Delivered
+    evidence: data/financials/quarterly/FY26Q3.yaml

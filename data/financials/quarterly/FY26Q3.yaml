@@ -1,0 +1,47 @@
+period: FY26Q3
+period_end: 2025-10-26
+reported_on: 2025-11-19
+source_urls:
+  press_release: https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026
+  cfo_commentary: https://investor.nvidia.com/financial-info/financial-reports/default.aspx
+  ten_q: https://www.sec.gov/Archives/edgar/data/1045810/000104581025000230/nvda-20251026.htm
+
+# All $ in millions unless noted
+income_statement:
+  revenue_total:
+    value: 57006
+    source: press_release_income_statement
+  revenue_by_segment:
+    data_center: { value: 51200, source: press_release_segments }
+    gaming:      { value: null,  source: "" }
+    pro_viz:     { value: 760,   source: press_release_segments }
+    auto:        { value: 592,   source: press_release_segments }
+    oem:         { value: null,  source: "" }
+  gross_profit_gaap:        { value: null, source: "" }
+  gross_margin_gaap_pct:    { value: 73.4, source: press_release_results_summary }
+  gross_margin_nongaap_pct: { value: 73.6, source: press_release_results_summary }
+  opex_rd:                  { value: null, source: "" }
+  opex_sga:                 { value: null, source: "" }
+  operating_income_gaap:    { value: null, source: "" }
+  net_income_gaap:          { value: null, source: "" }
+  eps_diluted_gaap:         { value: 1.30, source: press_release_results_summary }
+  eps_diluted_nongaap:      { value: 1.30, source: press_release_results_summary }
+
+balance_sheet:
+  cash_and_marketable_securities: { value: null, source: "" }
+  total_debt:                     { value: null, source: "" }
+  inventory:                      { value: null, source: "" }
+  purchase_commitments:           { value: null, source: "" }
+
+cash_flow:
+  operating_cash_flow: { value: null, source: "" }
+  capex:               { value: null, source: "" }
+  buybacks:            { value: null, source: "" }
+  dividends:           { value: null, source: "" }
+
+notes:
+  significant_customers: ""
+  subsequent_events: ""
+  mgmt_color: |
+    Record Data Center quarter at $51.2B, driven by Blackwell platform
+    shift. Sequential growth +22% on revenue. Non-GAAP opex ~$4.2B.

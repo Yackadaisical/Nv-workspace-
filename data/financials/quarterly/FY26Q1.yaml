@@ -1,0 +1,54 @@
+period: FY26Q1
+period_end: 2025-04-27
+reported_on: 2025-05-28
+source_urls:
+  press_release: https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2026
+  cfo_commentary: https://www.sec.gov/Archives/edgar/data/1045810/000104581025000115/q1fy26cfocommentary.htm
+  ten_q: https://www.sec.gov/Archives/edgar/data/1045810/000104581025000116/nvda-20250427.htm
+
+# All $ in millions unless noted
+income_statement:
+  revenue_total:
+    value: 44062
+    source: press_release_income_statement
+  revenue_by_segment:
+    data_center: { value: 39112, source: press_release_segments }
+    gaming:      { value: 3763,  source: press_release_segments }
+    pro_viz:     { value: 509,   source: press_release_segments }
+    auto:        { value: 567,   source: press_release_segments }
+    oem:         { value: 111,   source: press_release_segments_derived }
+  gross_profit_gaap:        { value: null, source: "" }
+  gross_margin_gaap_pct:    { value: 60.5, source: press_release_results_summary }
+  gross_margin_nongaap_pct: { value: 61.0, source: press_release_results_summary }
+  opex_rd:                  { value: null, source: "" }
+  opex_sga:                 { value: null, source: "" }
+  operating_income_gaap:    { value: null, source: "" }
+  net_income_gaap:          { value: null, source: "" }
+  eps_diluted_gaap:         { value: 0.76, source: press_release_results_summary }
+  eps_diluted_nongaap:      { value: 0.81, source: press_release_results_summary }
+
+balance_sheet:
+  cash_and_marketable_securities: { value: null, source: "" }
+  total_debt:                     { value: null, source: "" }
+  inventory:                      { value: null, source: "" }
+  purchase_commitments:           { value: null, source: "" }
+
+cash_flow:
+  operating_cash_flow: { value: null, source: "" }
+  capex:               { value: null, source: "" }
+  buybacks:            { value: null, source: "" }
+  dividends:           { value: null, source: "" }
+
+notes:
+  significant_customers: ""
+  subsequent_events: ""
+  mgmt_color: |
+    H20 export controls announced Apr 9 2025 triggered a $4.5B charge for excess
+    inventory and purchase obligations as demand for H20 in China dried up.
+    Blackwell ramp continued; Data Center +73% YoY. Next-quarter guide reflects
+    ~$8B loss of H20 revenue.
+  one_timers:
+    - desc: "H20 excess inventory / purchase obligation charge"
+      gross_pct_impact_bps: null
+      amount: 4500
+      source: press_release_commentary

@@ -1,0 +1,43 @@
+period: FY26Q1
+issued_on: 2025-05-28
+guides_for: FY26Q2
+
+quantitative:
+  revenue:
+    midpoint: 45000
+    range_pct: 2.0
+    actual: 46743
+    variance_pct: 3.87
+  gm_gaap_pct:
+    midpoint: null
+    range_bps: null
+    actual: 72.4
+    variance_bps: null
+  gm_nongaap_pct:
+    midpoint: null
+    range_bps: null
+    actual: 72.7
+    variance_bps: null
+  opex_gaap:
+    midpoint: null
+    actual: null
+  opex_nongaap:
+    midpoint: null
+    actual: null
+  tax_rate_pct:
+    midpoint: null
+    actual: null
+
+management_promises:
+  - id: FY26Q1-p1
+    quote: "Q2 revenue outlook of $45.0B ±2% reflects a loss of approximately $8.0B in H20 revenue due to recent export control limitations."
+    speaker: Colette
+    timeframe: FY26Q2
+    status: Delivered
+    evidence: data/financials/quarterly/FY26Q2.yaml
+  - id: FY26Q1-p2
+    quote: "Demand for Blackwell for AI and HPC is overwhelming."
+    speaker: Jensen
+    timeframe: FY26
+    status: Delivered
+    evidence: data/financials/quarterly/FY26Q2.yaml

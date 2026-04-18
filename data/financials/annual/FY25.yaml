@@ -1,0 +1,48 @@
+period: FY25
+period_end: 2025-01-26
+filed_on: 2025-02-26
+source_urls:
+  ten_k: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-K
+  press_release: https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2025
+
+# All $ in millions unless noted
+income_statement:
+  revenue_total:
+    value: 130500
+    source: ten_k_income_statement
+  revenue_by_segment:
+    data_center: { value: 115200, source: ten_k_segment_note }
+    gaming:      { value: 11350,  source: ten_k_segment_note }
+    pro_viz:     { value: 1880,   source: ten_k_segment_note }
+    auto:        { value: 1694,   source: ten_k_segment_note }
+    oem:         { value: 376,    source: ten_k_segment_note_derived }
+  gross_profit_gaap:        { value: null, source: "" }
+  gross_margin_gaap_pct:    { value: 75.0, source: press_release_fy_summary }
+  gross_margin_nongaap_pct: { value: null, source: "" }
+  opex_rd:                  { value: null, source: "" }
+  opex_sga:                 { value: null, source: "" }
+  operating_income_gaap:    { value: null, source: "" }
+  net_income_gaap:          { value: 72880, source: press_release_fy_summary }
+  eps_diluted_gaap:         { value: null, source: "" }
+  eps_diluted_nongaap:      { value: null, source: "" }
+
+balance_sheet:
+  cash_and_marketable_securities: { value: null, source: "" }
+  total_debt:                     { value: null, source: "" }
+  inventory:                      { value: null, source: "" }
+  purchase_commitments:           { value: null, source: ten_k_purchase_commitments_note }
+
+cash_flow:
+  operating_cash_flow: { value: null, source: "" }
+  capex:               { value: null, source: "" }
+  buybacks:            { value: null, source: "" }
+  dividends:           { value: null, source: "" }
+
+cross_check:
+  sum_of_quarters_matches: null     # FY25 quarterly YAMLs not tracked in v1
+  reclassifications: []
+
+long_term_framing:
+  tam_statement: ""
+  capital_return_policy: ""
+  segment_changes: ""
